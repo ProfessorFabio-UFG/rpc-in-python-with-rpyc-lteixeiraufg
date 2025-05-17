@@ -32,3 +32,38 @@ Also make sure it is using one of the ports left open for incoming TCP connectio
 ### Now add other remote procedures to the server and change the client to test them
 
 You may add the same remote procedures that you added in the sockets activity.
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+saída atual:
+
+Lista inicial: []
+O cliente conecta ao servidor e verifica que a lista começa vazia.
+
+Após adicionar [5, 10, 15]: [5, 10, 15]
+O cliente adiciona três números à lista remota, que agora contém [5, 10, 15].
+
+Tamanho da lista: 3
+O cliente consulta o tamanho da lista, que tem 3 elementos.
+
+Valor no índice 1: 10
+O cliente acessa o valor na posição 1 da lista (que é 10).
+
+Valor no índice 5 (fora do alcance): Erro: índice 5 fora do alcance
+O cliente tenta acessar um índice inexistente, e o servidor retorna uma mensagem de erro amigável.
+
+Removendo 10: [5, 15]
+O cliente remove o valor 10 da lista com sucesso.
+
+Tentando remover 100 (não existe): Erro: valor 100 não encontrado na lista
+O cliente tenta remover um valor que não está na lista, e o servidor retorna uma mensagem de erro.
+
+Lista antes de limpar: [5, 15]
+O cliente mostra o estado atual da lista antes de limpá-la.
+
+Limpando lista: []
+A lista é esvaziada remotamente pelo cliente.
+
+Lista final: []
+O cliente confirma que a lista agora está vazia.
